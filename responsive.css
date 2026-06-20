@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Responsive Design Media Queries
+   ========================================================================== */
+
+/* Tablet & Smaller Desktop (Max Width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-container {
+        gap: 30px;
+    }
+    
+    .job-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        width: 100%;
+        display: flex;
+    }
+    
+    .filter-group select {
+        flex: 1;
+    }
+}
+
+/* Tablet (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Header & Navigation */
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--bg-main);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        transition: left var(--transition-normal);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image {
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    /* Sections General */
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Jobs */
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .job-action {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .job-action .btn {
+        width: 100%;
+    }
+
+    .skeleton-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .pricing-card.recommended {
+        transform: none;
+    }
+    
+    .pricing-card.recommended:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Mobile (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+    }
+    
+    .job-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-container {
+        padding: 20px;
+    }
+}
